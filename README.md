@@ -12,12 +12,19 @@ this is what the project does
 
 ## Chapter 1
 
+
+[Back to top](https://github.com/jschuyl/README.generator#title)
 ## Chapter 2
 
+
+[Back to top](https://github.com/jschuyl/README.generator#title)
 ## Chapter 3
 
+
+[Back to top](https://github.com/jschuyl/README.generator#title)
 ## Contact Me
 ### Email
 placeholder@gmail.com
 ### Github
 github
+[Back to top](https://github.com/jschuyl/README.generator#title)
