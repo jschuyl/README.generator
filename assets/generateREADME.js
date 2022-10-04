@@ -1,3 +1,7 @@
-const fs = require("fs")
+function writeTheDangFile(userAnswers, userInfo){
+siteStart = `https://github.com/${userAnswers.github}/${userAnswers.repo}`
+console.log(siteStart)
 
-fs
+}
+
+siteStart = `https://github.com/${userAnswers.github}/${userAnswers.repo}`

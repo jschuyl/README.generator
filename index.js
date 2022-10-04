@@ -1,8 +1,9 @@
 const fs = require("fs")
-const inquirer = require("inquirer")
+const inquirer = require("inquirer");
 
-inquirer
-    .prompt([
+const writeTheDangFile = require("./assets/generateREADME.js")
+
+const questions = [
         {
             type: "input",
             message: "What username is your repo attatched to? Please do not include the @ symbol",
@@ -51,5 +52,14 @@ inquirer
             choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0", "The Unlicense"]
 
         }
+            ]
 
-    ])
+async function askTheQuestions() {
+    try {
+        const userAnswers = await inquirer.prompt(questions);
+        console.log("What you told me: ", userAnswers)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+askTheQuestions();
