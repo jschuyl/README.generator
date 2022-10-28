@@ -1,9 +1,11 @@
 const fs = require("fs")
 const inquirer = require("inquirer");
 
-const writeTheDangFile = require("./assets/generateREADME.js")
+const formatPage = require("./assets/generateMarkdown.js")
 
-const questions = [
+const questions = async () => {
+    const answers = await inquirer
+        .prompt([
         {
             type: "input",
             message: "What username is your repo attatched to? Please do not include the @ symbol",
@@ -46,20 +48,38 @@ const questions = [
             name: "install"
         },
         {
-            type: "checkbox",
+            type: "list",
             message: "please select which license your project uses",
             name: "license",
             choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0", "The Unlicense"]
 
         }
-            ]
+    ])
+}
 
-async function askTheQuestions() {
-    try {
-        const userAnswers = await inquirer.prompt(questions);
-        console.log("What you told me: ", userAnswers)
-        } catch (error) {
-            console.log(error)
-        }
+function writeToFile(fileName, data) {
+    const buildPage = formatPage(newStaffData);
+    fs.writeFileSync(output, buildPage, (err) =>
+    err ? console.error(err) : console.log("Page created")      
+    )
+}
+
+async function init() {
+    await questions()
+
+    const isThisYourFinalAnswer = await inquirer
+        .prompt([
+            {
+                type: "list",
+                message: `You told me ${answers}, is this correct?`,
+                choices:["Yes", "No"],
+                name: "areWeDoneYet"
+            }
+        ])
+    if (isThisYourFinalAnswer.areWeDoneYet === "Yes") {
+        return writeToFile()
+    } else {
+        return init()
     }
-askTheQuestions();
+}
+init();
