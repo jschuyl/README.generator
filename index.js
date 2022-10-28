@@ -1,7 +1,8 @@
 const fs = require("fs")
 const inquirer = require("inquirer");
+const { formatPage } = require("./assets/generateMarkdown.js")
 
-const formatPage = require("./assets/generateMarkdown.js")
+answerArray = []
 
 const questions = async () => {
     const answers = await inquirer
@@ -55,13 +56,12 @@ const questions = async () => {
 
         }
     ])
+    answerArray.push(answers)
+    console.log(answerArray)
 }
 
 function writeToFile(fileName, data) {
-    const buildPage = formatPage(newStaffData);
-    fs.writeFileSync(output, buildPage, (err) =>
-    err ? console.error(err) : console.log("Page created")      
-    )
+    formatPage(fileName, data)
 }
 
 async function init() {
@@ -71,7 +71,7 @@ async function init() {
         .prompt([
             {
                 type: "list",
-                message: `You told me ${answers}, is this correct?`,
+                message: `You told me the answers as listed above, are those answers correct?`,
                 choices:["Yes", "No"],
                 name: "areWeDoneYet"
             }
