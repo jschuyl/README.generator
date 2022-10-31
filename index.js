@@ -22,7 +22,7 @@ const questions = async () => {
         {
             type: "input",
             message: "What is the name of your repo?",
-            name: "repo",
+            name: "title",
             validate: function (answer) {
                 if (answer.length < 1) {
                     return console.log("Please enter a repository name");
@@ -45,14 +45,33 @@ const questions = async () => {
         },
         {
             type: "input",
-            message: "any special installation instructions?",
-            name: "install"
+            message: "Whats your email?",
+            name: "email",
+            validate: function (answer) {
+                if (answer.length < 1) {
+                    return console.log("Please enter an answer")
+                } else {
+                    return true;
+                }
+            } 
+        },
+        {
+            type: "input",
+            message: "How do you install and run your project?",
+            name: "install",
+            validate: function (answer) {
+                if (answer.length < 1) {
+                    return console.log("Please enter an answer")
+                } else {
+                    return true;
+                }
+            } 
         },
         {
             type: "list",
             message: "please select which license your project uses",
             name: "license",
-            choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0", "The Unlicense"]
+            choices: ["GNU GPLv3 License", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0", "Unlicense", "None"]
 
         }
     ])
