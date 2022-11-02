@@ -86,7 +86,7 @@ const questions = async () => {
     console.log(answerArray)
 }
 
-function writeToFile(fileName, data) {
+function writeToFile() {
     const buildFile = generateMarkdown(answerArray);
     fs.writeFileSync(output, buildFile, err => {
         return console.log(err)
