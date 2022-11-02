@@ -1,6 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./assets/generateMarkdown.js");
+const path = require("path")
 
 answerArray = []
 
