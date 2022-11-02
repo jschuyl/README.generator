@@ -1,4 +1,6 @@
 {
+  "name" : "static-site",
+  "main" : "index.js",
   "dependencies": {
     "inquirer": "^8.2.4"
   }

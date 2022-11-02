@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  console.log("rendering badge")
   switch(license) {
     case "GNU GPLv3":
       return "[![License: GNU AGPLv3](https://img.shields.io/badge/License-GNU%20AGPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
@@ -22,6 +23,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  console.log("rendering link")
   switch(license){
     case "GNU GPLv3 License":
       return "[Details on the GNU GPLv3 License](https://choosealicense.com/licenses/gpl-3.0/)";
@@ -43,6 +45,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  console.log("rendering license")
   if(license === "None"){
     return ""
   }
@@ -53,7 +56,45 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  console.log("generating markdown")
+  return `${renderLicenseBadge(data.license)}
+ # ${data.title}
+
+### Description
+
+${data.synopsis}
+
+## Table of Contents
+1. [Description: ](https://github.com/${data.github}/${data.title}#Description)
+2. [Installation Guide: ](https://github.com/${data.github}/${data.title}#Installation-Guide)
+3. [Contribution Guide: ](https://github.com/${data.github}/${data.title}#Contribution-Guide)
+- [License](https://github.com/${data.github}/${data.title}#license)
+- [Contacts ](https://github.com/${data.github}/${data.title}#contact-me)
+
+
+
+[Back to top](https://github.com/${data.github}/${data.title}#title)
+## Installation Guide
+
+${data.install}
+
+[Back to top](https://github.com/${data.github}/${data.title}#title)
+## Contribution Guide
+
+${data.helpPls}
+
+[Back to top](https://github.com/${data.github}/${data.title}#title)
+## License
+
+${renderLicenseSection(data.license)}
+${renderLicenseLink(data.license)}
+
+## Contact Me
+### Email
+[${data.email}](mailto:${data.email})
+### Github
+[${data.github}](https://github.com/${data.github})
+[Back to top](https://github.com/${data.github}/${data.title}#title)
 
 `;
 }

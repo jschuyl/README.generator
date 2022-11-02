@@ -1,6 +1,6 @@
-const fs = require("fs")
+const fs = require("fs");
 const inquirer = require("inquirer");
-const { formatPage } = require("./assets/generateMarkdown.js")
+const generateMarkdown = require("./assets/generateMarkdown.js");
 
 answerArray = []
 
@@ -68,6 +68,11 @@ const questions = async () => {
             } 
         },
         {
+            type: "input",
+            message: "How would you like others to contribute to this project?",
+            name: "helpPls"
+        },
+        {
             type: "list",
             message: "please select which license your project uses",
             name: "license",
@@ -80,7 +85,10 @@ const questions = async () => {
 }
 
 function writeToFile(fileName, data) {
-    formatPage(fileName, data)
+    fs.writeFile(fileName, data, err => {
+        return console.log(err)
+    });
+    console.log("README generated")
 }
 
 async function init() {
@@ -95,9 +103,10 @@ async function init() {
                 name: "areWeDoneYet"
             }
         ])
-    if (isThisYourFinalAnswer.areWeDoneYet === "Yes") {
+    if (isThisYourFinalAnswer.areWeDoneYet == "Yes") {
+        console.log("Final answer locked and loaded")
         return writeToFile()
-    } else {
+    } if (isThisYourFinalAnswer.areWeDoneYet == "No") {
         return init()
     }
 }
