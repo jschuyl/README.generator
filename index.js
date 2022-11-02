@@ -2,6 +2,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./assets/generateMarkdown.js");
 const path = require("path")
+const output = path.join("README.md")
 
 answerArray = []
 
@@ -85,8 +86,9 @@ const questions = async () => {
     console.log(answerArray)
 }
 
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
+function writeToFile() {
+    const buildFile = generateMarkdown(answerArray);
+    fs.writeFileSync(output, buildFile, err => {
         return console.log(err)
     });
     console.log("README generated")

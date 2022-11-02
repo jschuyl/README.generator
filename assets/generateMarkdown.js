@@ -55,46 +55,46 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(answer) {
   console.log("generating markdown")
-  return `${renderLicenseBadge(data.license)}
- # ${data.title}
+  return `${renderLicenseBadge(answer.license)}
+ # ${answer.title}
 
 ### Description
 
-${data.synopsis}
+${answer.synopsis}
 
 ## Table of Contents
-1. [Description: ](https://github.com/${data.github}/${data.title}#Description)
-2. [Installation Guide: ](https://github.com/${data.github}/${data.title}#Installation-Guide)
-3. [Contribution Guide: ](https://github.com/${data.github}/${data.title}#Contribution-Guide)
-- [License](https://github.com/${data.github}/${data.title}#license)
-- [Contacts ](https://github.com/${data.github}/${data.title}#contact-me)
+1. [Description: ](https://github.com/${answer.github}/${answer.title}#Description)
+2. [Installation Guide: ](https://github.com/${answer.github}/${answer.title}#Installation-Guide)
+3. [Contribution Guide: ](https://github.com/${answer.github}/${answer.title}#Contribution-Guide)
+- [License](https://github.com/${answer.github}/${answer.title}#license)
+- [Contacts ](https://github.com/${answer.github}/${answer.title}#contact-me)
 
 
 
-[Back to top](https://github.com/${data.github}/${data.title}#title)
+[Back to top](https://github.com/${answer.github}/${answer.title}#title)
 ## Installation Guide
 
-${data.install}
+${answer.install}
 
-[Back to top](https://github.com/${data.github}/${data.title}#title)
+[Back to top](https://github.com/${answer.github}/${answer.title}#title)
 ## Contribution Guide
 
-${data.helpPls}
+${answer.helpPls}
 
-[Back to top](https://github.com/${data.github}/${data.title}#title)
+[Back to top](https://github.com/${answer.github}/${answer.title}#title)
 ## License
 
-${renderLicenseSection(data.license)}
-${renderLicenseLink(data.license)}
+${renderLicenseSection(answer.license)}
+${renderLicenseLink(answer.license)}
 
 ## Contact Me
 ### Email
-[${data.email}](mailto:${data.email})
+[${answer.email}](mailto:${answer.email})
 ### Github
-[${data.github}](https://github.com/${data.github})
-[Back to top](https://github.com/${data.github}/${data.title}#title)
+[${answer.github}](https://github.com/${answer.github})
+[Back to top](https://github.com/${answer.github}/${answer.title}#title)
 
 `;
 }
