@@ -90,7 +90,7 @@ async function init() {
    inquirer
     .prompt(questions)
     .then((response) => {
-        writeToFile("README.md", generateMarkdown(response))
+        writeToFile("OUTPUT.md", generateMarkdown(response))
     })
     .then(()=>console.log("file generated"))
     .catch((err) => console.log(err))

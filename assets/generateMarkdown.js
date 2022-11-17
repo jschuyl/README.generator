@@ -3,7 +3,7 @@
 function renderLicenseBadge(license) {
   console.log("rendering badge")
   switch(license) {
-    case "GNU GPLv3":
+    case "GNU GPLv3 License":
       return "[![License: GNU AGPLv3](https://img.shields.io/badge/License-GNU%20AGPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
     case "Mozilla Public License 2.0":
       return "[![License: Mozilla Public License 2.0](https://img.shields.io/badge/License-Mozilla%20Public%20License%202.0-blue.svg)](https://www.mozilla.org/en-US/MPL/2.0/)";
@@ -49,8 +49,7 @@ function renderLicenseSection(license) {
   if(license === "None"){
     return ""
   }
-  return `
-  ## License
+  return `## License
   This project is under the ${license}`
 }
 

@@ -17,7 +17,7 @@ README.generator is an app that, you guessed it, generates a README.md for your 
 [Back to top](https://github.com/jschuyl/README.generator#title)
 ## Installation Guide
 
-Download the repo to your PC. Open the command line within the folder you downloaded and then run npm install. Once the necessary packages are done downloading, run "npm node index.js" and answer the questions.
+Download the repo to your PC. Open the command line within the folder you downloaded and then run npm install. Once the necessary packages are done downloading, run "npm start" and answer the prompted questions.
 
 [Back to top](https://github.com/jschuyl/README.generator#title)
 ## Contribution Guide
