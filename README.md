@@ -1,41 +1,38 @@
-
- # undefined
+[![License: MIT License](https://img.shields.io/badge/License-MIT%20License-blue.svg)](https://opensource.org/licenses/MIT)
+ # README.generator
 
 ### Description
 
-undefined
+README.generator is an app that, you guessed it, generates a README.md for your project. This app is run from your command line using node.js.
 
 ## Table of Contents
-1. [Description: ](https://github.com/undefined/undefined#Description)
-2. [Installation Guide: ](https://github.com/undefined/undefined#Installation-Guide)
-3. [Contribution Guide: ](https://github.com/undefined/undefined#Contribution-Guide)
-- [License](https://github.com/undefined/undefined#license)
-- [Contacts ](https://github.com/undefined/undefined#contact-me)
+1. [Description: ](https://github.com/jschuyl/README.generator#Description)
+2. [Installation Guide: ](https://github.com/jschuyl/README.generator#Installation-Guide)
+3. [Contribution Guide: ](https://github.com/jschuyl/README.generator#Contribution-Guide)
+- [License](https://github.com/jschuyl/README.generator#license)
+- [Contacts ](https://github.com/jschuyl/README.generator#contact-me)
 
 
 
-[Back to top](https://github.com/undefined/undefined#title)
+[Back to top](https://github.com/jschuyl/README.generator#title)
 ## Installation Guide
 
-undefined
+Download the repo to your PC. Open the command line within the folder you downloaded and then run npm install. Once the necessary packages are done downloading, run "npm node index.js" and answer the questions.
 
-[Back to top](https://github.com/undefined/undefined#title)
+[Back to top](https://github.com/jschuyl/README.generator#title)
 ## Contribution Guide
 
-undefined
+Contribution is not necessary, but thank you for looking to
 
-[Back to top](https://github.com/undefined/undefined#title)
-## License
-
-
+[Back to top](https://github.com/jschuyl/README.generator#title)
   ## License
-  This project is under the undefined
-
+  This project is under the MIT License
+[Details on the MIT License](https://choosealicense.com/licenses/mit/)
 
 ## Contact Me
 ### Email
-[undefined](mailto:undefined)
+[schuylertjed@gmail.com](mailto:schuylertjed@gmail.com)
 ### Github
-[undefined](https://github.com/undefined)
-[Back to top](https://github.com/undefined/undefined#title)
+[jschuyl](https://github.com/jschuyl)
+[Back to top](https://github.com/jschuyl/README.generator#title)
 

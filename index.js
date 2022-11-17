@@ -1,14 +1,10 @@
-const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./assets/generateMarkdown.js");
-const path = require("path")
-const output = path.join("README.md")
+const { writeFile } = require("fs").promises;
 
 answerArray = []
 
-const questions = async () => {
-    const answers = await inquirer
-        .prompt([
+const questions = [
         {
             type: "input",
             message: "What username is your repo attatched to? Please do not include the @ symbol",
@@ -81,36 +77,22 @@ const questions = async () => {
             choices: ["GNU GPLv3 License", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0", "Unlicense", "None"]
 
         }
-    ])
-    answerArray.push(answers)
-    console.log(answerArray)
-}
+    ]
 
-function writeToFile() {
-    const buildFile = generateMarkdown(answerArray);
-    fs.writeFileSync(output, buildFile, err => {
+function writeToFile(fileName, data) {
+    writeFile(fileName, data, err => {
         return console.log(err)
     });
     console.log("README generated")
 }
 
 async function init() {
-    await questions()
-
-    const isThisYourFinalAnswer = await inquirer
-        .prompt([
-            {
-                type: "list",
-                message: `You told me the answers as listed above, are those answers correct?`,
-                choices:["Yes", "No"],
-                name: "areWeDoneYet"
-            }
-        ])
-    if (isThisYourFinalAnswer.areWeDoneYet == "Yes") {
-        console.log("Final answer locked and loaded")
-        return writeToFile()
-    } if (isThisYourFinalAnswer.areWeDoneYet == "No") {
-        return init()
-    }
+   inquirer
+    .prompt(questions)
+    .then((response) => {
+        writeToFile("README.md", generateMarkdown(response))
+    })
+    .then(()=>console.log("file generated"))
+    .catch((err) => console.log(err))
 }
 init();

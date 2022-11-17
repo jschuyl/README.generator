@@ -84,7 +84,6 @@ ${data.install}
 ${data.helpPls}
 
 [Back to top](https://github.com/${data.github}/${data.title}#title)
-## License
 
 ${renderLicenseSection(data.license)}
 ${renderLicenseLink(data.license)}
@@ -94,6 +93,7 @@ ${renderLicenseLink(data.license)}
 [${data.email}](mailto:${data.email})
 ### Github
 [${data.github}](https://github.com/${data.github})
+
 [Back to top](https://github.com/${data.github}/${data.title}#title)
 
 `;
