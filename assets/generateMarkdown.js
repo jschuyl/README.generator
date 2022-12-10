@@ -64,25 +64,25 @@ function generateMarkdown(data) {
 ${data.synopsis}
 
 ## Table of Contents
-1. [Description: ](https://github.com/${data.github}/${data.title}#Description)
-2. [Installation Guide: ](https://github.com/${data.github}/${data.title}#Installation-Guide)
-3. [Contribution Guide: ](https://github.com/${data.github}/${data.title}#Contribution-Guide)
-- [License](https://github.com/${data.github}/${data.title}#license)
-- [Contacts ](https://github.com/${data.github}/${data.title}#contact-me)
+1. [Description: ](#Description)
+2. [Installation Guide: ](#Installation-Guide)
+3. [Contribution Guide: ](#Contribution-Guide)
+- [License](#license)
+- [Contacts ](#contact-me)
 
 
 
-[Back to top](https://github.com/${data.github}/${data.title}#title)
+[Back to top](#title)
 ## Installation Guide
 
 ${data.install}
 
-[Back to top](https://github.com/${data.github}/${data.title}#title)
+[Back to top](#title)
 ## Contribution Guide
 
 ${data.helpPls}
 
-[Back to top](https://github.com/${data.github}/${data.title}#title)
+[Back to top](#title)
 
 ${renderLicenseSection(data.license)}
 ${renderLicenseLink(data.license)}
@@ -93,7 +93,7 @@ ${renderLicenseLink(data.license)}
 ### Github
 [${data.github}](https://github.com/${data.github})
 
-[Back to top](https://github.com/${data.github}/${data.title}#title)
+[Back to top](#title)
 
 `;
 }

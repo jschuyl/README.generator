@@ -1,40 +1,40 @@
-[![License: GNU AGPLv3](https://img.shields.io/badge/License-GNU%20AGPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
- # no
+[![License: MIT License](https://img.shields.io/badge/License-MIT%20License-blue.svg)](https://opensource.org/licenses/MIT)
+ # Profile-Generator
 
 ### Description
 
-no
+This project uses user input to generate a series of profiles for a team. The profiles will have the base information other team members need to know who their teammates are as well as how to get in contact with them.
 
 ## Table of Contents
-1. [Description: ](https://github.com/no/no#Description)
-2. [Installation Guide: ](https://github.com/no/no#Installation-Guide)
-3. [Contribution Guide: ](https://github.com/no/no#Contribution-Guide)
-- [License](https://github.com/no/no#license)
-- [Contacts ](https://github.com/no/no#contact-me)
+1. [Description: ](#Description)
+2. [Installation Guide: ](#Installation-Guide)
+3. [Contribution Guide: ](#Contribution-Guide)
+- [License](#license)
+- [Contacts ](#contact-me)
 
 
 
-[Back to top](https://github.com/no/no#title)
+[Back to top](#title)
 ## Installation Guide
 
-no
+After cloning from github, run `npm i` in your integrated terminal to download necessary packages and then run `npm run start` to begin. Answer questions as prompted.
 
-[Back to top](https://github.com/no/no#title)
+[Back to top](#title)
 ## Contribution Guide
 
-no
+Front end is a little clunky at the moment, as well as adding more questions to get more info all in one place for the team members.
 
-[Back to top](https://github.com/no/no#title)
+[Back to top](#title)
 
 ## License
-  This project is under the GNU GPLv3 License
-[Details on the GNU GPLv3 License](https://choosealicense.com/licenses/gpl-3.0/)
+  This project is under the MIT License
+[Details on the MIT License](https://choosealicense.com/licenses/mit/)
 
 ## Contact Me
 ### Email
-[no](mailto:no)
+[schuylertjed@gmail.com](mailto:schuylertjed@gmail.com)
 ### Github
-[no](https://github.com/no)
+[jschuyl](https://github.com/jschuyl)
 
-[Back to top](https://github.com/no/no#title)
+[Back to top](#title)
 
